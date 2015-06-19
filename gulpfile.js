@@ -29,7 +29,6 @@ gulp.task('browser-sync', function() {
       baseDir: ['./']
     },
     port: 3500,
-    browser: [],
     tunnel: false
   });
 });
@@ -59,7 +58,6 @@ gulp.task('sass', function() {
 
 // serve task
 gulp.task('serve', ['browser-sync', 'js', 'sass'] , function(cb) {
-
   plugins.watch(
     './src/sass/**/*.scss',
     {
